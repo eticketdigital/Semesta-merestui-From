@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>POLIPONI BALI 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f6fb;
+color:#111;
+}
+
+/* HEADER */
+
+.header{
+height:75px;
+background:#0038d9;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 25px;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.logo{
+font-size:30px;
+font-weight:800;
+color:white;
+}
+
+.header-right{
+display:flex;
+gap:12px;
+}
+
+.circle{
+width:42px;
+height:42px;
+border-radius:50%;
+background:rgba(255,255,255,.15);
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-weight:700;
+}
+
+/* BANNER */
+
+.banner{
+width:100%;
+height:330px;
+overflow:hidden;
+}
+
+.banner img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* CONTAINER */
+
+.container{
+max-width:1450px;
+margin:auto;
+padding:25px;
+}
+
+/* STEPS */
+
+.steps{
+display:flex;
+gap:12px;
+margin-bottom:25px;
+flex-wrap:wrap;
+}
+
+.step{
+flex:1;
+min-width:120px;
+background:white;
+padding:14px;
+border-radius:14px;
+font-weight:600;
+text-align:center;
+border:2px solid #e9e9e9;
+}
+
+.step.active{
+background:#0038d9;
+color:white;
+border-color:#0038d9;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr 350px;
+gap:20px;
+align-items:start;
+}
+
+/* CARD */
+
+.card{
+background:white;
+border-radius:24px;
+padding:24px;
+box-shadow:0 8px 25px rgba(0,0,0,.05);
+}
+
+.card-title{
+font-size:22px;
+font-weight:700;
+margin-bottom:22px;
+color:#0038d9;
+}
+
+/* INPUT */
+
+.input-group{
+margin-bottom:18px;
+}
+
+.input-group label{
+display:block;
+margin-bottom:8px;
+font-weight:600;
+}
+
+.input-group input,
+.input-group select{
+width:100%;
+height:54px;
+border-radius:14px;
+border:1px solid #ddd;
+padding:0 16px;
+font-size:15px;
+outline:none;
+}
+
+.input-group input:focus,
+.input-group select:focus{
+border-color:#0038d9;
+}
+
+/* SUMMARY */
+
+.summary-line{
+display:flex;
+justify-content:space-between;
+margin-bottom:14px;
+font-size:15px;
+}
+
+.total{
+font-size:32px;
+font-weight:800;
+margin-top:18px;
+color:#0038d9;
+}
+
+/* BUTTON */
+
+.btn{
+width:100%;
+height:58px;
+border:none;
+border-radius:16px;
+background:#0038d9;
+color:white;
+font-size:17px;
+font-weight:700;
+cursor:pointer;
+transition:.3s;
+margin-top:20px;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+}
+
+/* ========================= */
+/* PAYMENT PAGE ARTATIX STYLE */
+/* ========================= */
+
+.payment-page{
+display:none;
+padding:24px;
+max-width:760px;
+margin:40px auto;
+background:#f4f7ff;
+border-radius:34px;
+box-shadow:0 15px 40px rgba(0,56,217,.12);
+border:1px solid #dbe4ff;
+position:relative;
+overflow:hidden;
+}
+
+.payment-head{
+background:linear-gradient(135deg,#0038d9,#2457ff);
+padding:28px;
+border-radius:28px;
+margin-bottom:22px;
+position:relative;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,56,217,.25);
+}
+
+.payment-head::before{
+content:'ARTATIX';
+position:absolute;
+right:-10px;
+top:-10px;
+font-size:72px;
+font-weight:900;
+color:rgba(255,255,255,.06);
+letter-spacing:5px;
+}
+
+.payment-head h2{
+font-size:34px;
+font-weight:800;
+line-height:1;
+margin-bottom:10px;
+color:white;
+text-transform:uppercase;
+}
+
+.payment-head p{
+font-size:15px;
+font-weight:500;
+color:rgba(255,255,255,.85);
+}
+
+.payment-method{
+display:flex;
+gap:14px;
+margin-bottom:24px;
+}
+
+.pay-box{
+flex:1;
+padding:16px;
+border-radius:18px;
+text-align:center;
+font-weight:700;
+font-size:15px;
+background:white;
+border:2px solid #dbe4ff;
+color:#0038d9;
+box-shadow:0 5px 14px rgba(0,0,0,.04);
+}
+
+.timer{
+font-size:52px;
+font-weight:800;
+text-align:center;
+color:#0038d9;
+margin-bottom:25px;
+letter-spacing:2px;
+}
+
+/* ========================= */
+/* QRIS ARTATIX */
+/* ========================= */
+
+.qris-banner{
+background:linear-gradient(180deg,#ffffff,#edf3ff);
+padding:28px;
+border-radius:32px;
+border:2px solid #dbe4ff;
+margin-bottom:25px;
+position:relative;
+overflow:hidden;
+box-shadow:
+0 10px 30px rgba(0,56,217,.10),
+inset 0 1px 0 rgba(255,255,255,.9);
+}
+
+.qris-banner::before{
+content:'';
+position:absolute;
+top:-80px;
+right:-80px;
+width:220px;
+height:220px;
+background:rgba(0,56,217,.08);
+border-radius:50%;
+}
+
+.qris-banner::after{
+content:'';
+position:absolute;
+bottom:-100px;
+left:-100px;
+width:240px;
+height:240px;
+background:rgba(76,111,255,.06);
+border-radius:50%;
+}
+
+.qris-top{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:20px;
+position:relative;
+z-index:2;
+}
+
+.color-box{
+width:16px;
+height:16px;
+border-radius:50%;
+}
+
+.red{
+background:#0038d9;
+}
+
+.yellow{
+background:#4c6fff;
+}
+
+.blue{
+background:#7ea1ff;
+}
+
+.green{
+background:#c7d6ff;
+}
+
+.qris-title{
+font-size:38px;
+font-weight:800;
+line-height:1;
+margin-bottom:12px;
+color:#0038d9;
+position:relative;
+z-index:2;
+letter-spacing:1px;
+}
+
+.qris-sub{
+background:linear-gradient(135deg,#0038d9,#4c6fff);
+display:inline-block;
+padding:12px 22px;
+font-size:18px;
+font-weight:700;
+color:white;
+border-radius:16px;
+margin-bottom:24px;
+box-shadow:0 8px 20px rgba(0,56,217,.25);
+position:relative;
+z-index:2;
+}
+
+.qris-box{
+background:white;
+padding:24px;
+border-radius:28px;
+border:2px dashed #b8caff;
+text-align:center;
+margin-bottom:22px;
+position:relative;
+z-index:2;
+box-shadow:0 8px 20px rgba(0,0,0,.04);
+}
+
+.qris-box img{
+width:100%;
+max-width:280px;
+}
+
+.payment-total-box{
+background:linear-gradient(135deg,#0038d9,#4c6fff);
+padding:20px;
+border-radius:22px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-weight:700;
+font-size:22px;
+margin-bottom:22px;
+color:white;
+position:relative;
+z-index:2;
+box-shadow:0 10px 25px rgba(0,56,217,.22);
+}
+
+/* UPLOAD */
+
+.upload-box{
+border:2px dashed #b9cbff;
+border-radius:24px;
+padding:28px;
+background:white;
+text-align:center;
+margin-top:15px;
+position:relative;
+box-shadow:0 6px 18px rgba(0,0,0,.03);
+}
+
+.upload-box label{
+display:block;
+font-size:19px;
+font-weight:700;
+margin-bottom:15px;
+color:#0038d9;
+}
+
+.upload-box input{
+width:100%;
+padding:14px;
+border-radius:14px;
+border:1px solid #d7e2ff;
+background:#f5f8ff;
+font-weight:600;
+}
+
+/* CHECK */
+
+.check-area{
+display:flex;
+align-items:flex-start;
+gap:12px;
+margin-top:22px;
+font-size:14px;
+background:white;
+padding:18px;
+border-radius:20px;
+border:1px solid #dbe4ff;
+box-shadow:0 5px 14px rgba(0,0,0,.03);
+}
+
+.check-area input{
+margin-top:4px;
+transform:scale(1.2);
+accent-color:#0038d9;
+}
+
+/* BUTTON */
+
+.payment-btn{
+width:100%;
+height:64px;
+border:none;
+border-radius:22px;
+background:linear-gradient(135deg,#0038d9,#4c6fff);
+color:white;
+font-size:19px;
+font-weight:800;
+cursor:pointer;
+transition:.3s;
+margin-top:25px;
+box-shadow:0 12px 25px rgba(0,56,217,.25);
+}
+
+.payment-btn:hover{
+transform:translateY(-3px);
+}
+
+/* LOADING */
+
+.loading-page{
+display:none;
+position:fixed;
+inset:0;
+background:white;
+z-index:999999;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+padding:20px;
+}
+
+.loader{
+width:95px;
+height:95px;
+border:8px solid #eee;
+border-top:8px solid #0038d9;
+border-radius:50%;
+animation:spin 1s linear infinite;
+margin-bottom:30px;
+}
+
+@keyframes spin{
+100%{
+transform:rotate(360deg);
+}
+}
+
+.loading-page h1{
+font-size:34px;
+margin-bottom:10px;
+}
+
+.loading-page p{
+font-size:16px;
+color:#666;
+}
+
+/* FAILED */
+
+.failed-page{
+display:none;
+min-height:100vh;
+background:white;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+padding:20px;
+}
+
+.failed-icon{
+width:140px;
+height:140px;
+border-radius:50%;
+background:#ffeded;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:70px;
+color:#ff2a2a;
+margin-bottom:25px;
+animation:pop .5s ease;
+}
+
+@keyframes pop{
+0%{
+transform:scale(.5);
+opacity:0;
+}
+100%{
+transform:scale(1);
+opacity:1;
+}
+}
+
+.failed-page h1{
+font-size:42px;
+margin-bottom:10px;
+color:#111;
+}
+
+.failed-page p{
+font-size:17px;
+color:#666;
+margin-bottom:30px;
+max-width:500px;
+}
+
+.redirect-btn{
+padding:16px 30px;
+background:#0038d9;
+color:white;
+border-radius:16px;
+text-decoration:none;
+font-weight:700;
+}
+
+/* MOBILE */
+
+@media(max-width:1100px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.banner{
+height:220px;
+}
+
+}
+
+@media(max-width:700px){
+
+.payment-head h2{
+font-size:28px;
+}
+
+.qris-title{
+font-size:30px;
+}
+
+.qris-sub{
+font-size:16px;
+}
+
+.timer{
+font-size:42px;
+}
+
+.payment-total-box{
+font-size:17px;
+flex-direction:column;
+gap:10px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+
+<div class="header">
+<div class="logo">ARTATIX</div>
+
+<div class="header-right">
+<div class="circle">ID</div>
+<div class="circle">☰</div>
+</div>
+</div>
+
+<!-- BANNER -->
+
+<div class="banner">
+<img src="banner.png">
+</div>
+
+<!-- MAIN -->
+
+<div class="container" id="mainPage">
+
+<div class="steps">
+<div class="step active">1. Tiket</div>
+<div class="step active">2. Data</div>
+<div class="step active">3. Pembayaran</div>
+<div class="step active">4. Konfirmasi</div>
+</div>
+
+<div class="grid">
+
+<!-- FORM -->
+
+<div class="card">
+
+<div class="card-title">
+Data Pembeli
+</div>
+
+<div class="input-group">
+<label>Nama Lengkap *</label>
+<input type="text" id="nama" required>
+</div>
+
+<div class="input-group">
+<label>Jenis Identitas *</label>
+<select id="jenisIdentitas" required>
+<option value="">Pilih Identitas</option>
+<option>KTP</option>
+<option>SIM</option>
+<option>PASPOR</option>
+<option>KARTU PELAJAR</option>
+</select>
+</div>
+
+<div class="input-group">
+<label>Nomor Identitas *</label>
+<input type="text" id="nomorIdentitas" required>
+</div>
+
+<div class="input-group">
+<label>E-mail *</label>
+<input type="email" id="email" required>
+</div>
+
+<div class="input-group">
+<label>No. Whatsapp *</label>
+<input type="number" id="wa" required>
+</div>
+
+</div>
+
+<!-- TIKET -->
+
+<div class="card">
+
+<div class="card-title">
+Pembelian Tiket
+</div>
+
+<div class="input-group">
+<label>Category Tiket *</label>
+<select id="ticket" onchange="updateTotal()" required>
+<option value="">Pilih Tiket</option>
+<option value="119000">FESTIVAL (PRESALE1) - Rp. 119.000</option>
+<option value="235000">VIP (PRESALE 1)- Rp. 235.000</option>
+</div>
+
+<div class="input-group">
+<label>Jumlah Tiket *</label>
+<select id="jumlah" onchange="updateTotal()" required>
+<option value="">Pilih Jumlah</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+</select>
+</div>
+
+</div>
+
+<!-- SUMMARY -->
+
+<div class="card">
+
+<div class="card-title">
+Ringkasan Pembelian
+</div>
+
+<div class="summary-line">
+<span>Event</span>
+<span>NEVERLAND PROJECT ID</span>
+</div>
+
+<div class="summary-line">
+<span>Tiket</span>
+<span id="sumTicket">-</span>
+</div>
+
+<div class="summary-line">
+<span>Jumlah</span>
+<span id="sumJumlah">0</span>
+</div>
+
+<div class="summary-line">
+<span>Admin</span>
+<span>Rp10.000</span>
+</div>
+
+<div class="total" id="totalBayar">
+Rp0
+</div>
+
+<button class="btn" onclick="nextPage()">
+SELANJUTNYA
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PAYMENT PAGE -->
+
+<div class="payment-page" id="paymentPage">
+
+<div class="payment-head">
+<h2>QRIS PAYMENT</h2>
+<p>NEVERLAND PROJECT INDONESIA</p>
+</div>
+
+<div class="payment-method">
+<div class="pay-box">M-BANKING</div>
+<div class="pay-box">E-WALLET</div>
+</div>
+
+<div class="timer" id="timer">
+07:00
+</div>
+
+<div class="qris-banner">
+
+<div class="qris-top">
+<div class="color-box red"></div>
+<div class="color-box yellow"></div>
+<div class="color-box blue"></div>
+<div class="color-box green"></div>
+</div>
+
+<div class="qris-title">
+ARTATIX QRIS
+</div>
+
+<div class="qris-sub">
+SCAN QRIS SEKARANG
+</div>
+
+<div class="qris-box">
+<img src="qris-bayar.png">
+</div>
+
+<div class="payment-total-box">
+<span>TOTAL PEMBAYARAN</span>
+<span id="paymentTotal">Rp0</span>
+</div>
+
+</div>
+
+<!-- UPLOAD -->
+
+<div class="upload-box">
+
+<label>
+UPLOAD BUKTI PEMBAYARAN
+</label>
+
+<input type="file" id="bukti" accept="image/*">
+
+</div>
+
+<div class="check-area">
+<input type="checkbox" id="confirmCheck">
+
+<label for="confirmCheck">
+Saya memastikan pembayaran sudah dilakukan sesuai nominal dan data pembelian sudah benar.
+</label>
+</div>
+
+<button class="payment-btn" onclick="processPayment()">
+KONFIRMASI PEMBAYARAN
+</button>
+
+</div>
+
+<!-- LOADING -->
+
+<div class="loading-page" id="loadingPage">
+
+<div class="loader"></div>
+
+<h1>Dalam Proses</h1>
+
+<p>
+Mohon tunggu, sistem sedang memverifikasi pembayaran Anda...
+</p>
+
+</div>
+
+<!-- FAILED -->
+
+<div class="failed-page" id="failedPage">
+
+<div class="failed-icon">
+✖
+</div>
+
+<h1>Pembayaran Gagal</h1>
+
+<p>
+Sistem tidak dapat memverifikasi pembayaran Anda.
+Silakan coba kembali atau lanjutkan ke halaman event.
+</p>
+
+<a class="redirect-btn" href="https://artatix.co.id/event/neverland_bandung">
+LANJUTKAN
+</a>
+
+</div>
+
+<script>
+
+let total = 0;
+
+function updateTotal(){
+
+const ticket = document.getElementById('ticket');
+const jumlah = document.getElementById('jumlah');
+
+const ticketText = ticket.options[ticket.selectedIndex]?.text || '-';
+
+const harga = parseInt(ticket.value || 0);
+const qty = parseInt(jumlah.value || 0);
+
+total = (harga * qty) + 10000;
+
+document.getElementById('sumTicket').innerText = ticketText;
+document.getElementById('sumJumlah').innerText = qty;
+
+document.getElementById('totalBayar').innerText =
+'Rp' + total.toLocaleString('id-ID');
+
+document.getElementById('paymentTotal').innerText =
+'Rp' + total.toLocaleString('id-ID');
+
+}
+
+function nextPage(){
+
+const required = document.querySelectorAll('input[required], select[required]');
+
+for(let input of required){
+
+if(!input.value){
+
+alert('Lengkapi semua data terlebih dahulu');
+
+input.focus();
+
+return;
+
+}
+
+}
+
+document.getElementById('mainPage').style.display='none';
+
+document.getElementById('loadingPage').style.display='flex';
+
+setTimeout(()=>{
+
+document.getElementById('loadingPage').style.display='none';
+
+document.getElementById('paymentPage').style.display='block';
+
+startTimer();
+
+window.scrollTo(0,0);
+
+},3000);
+
+}
+
+let duration = 420;
+let started = false;
+
+function startTimer(){
+
+if(started) return;
+
+started = true;
+
+const timer = document.getElementById('timer');
+
+const interval = setInterval(()=>{
+
+let minutes = Math.floor(duration / 60);
+let seconds = duration % 60;
+
+seconds = seconds < 10 ? '0'+seconds : seconds;
+
+timer.innerHTML = minutes + ':' + seconds;
+
+duration--;
+
+if(duration < 0){
+
+clearInterval(interval);
+
+timer.innerHTML = 'EXPIRED';
+
+}
+
+},1000);
+
+}
+
+function processPayment(){
+
+const bukti = document.getElementById('bukti').value;
+const check = document.getElementById('confirmCheck').checked;
+
+if(!bukti){
+
+alert('Upload bukti pembayaran terlebih dahulu');
+
+return;
+
+}
+
+if(!check){
+
+alert('Checklist persetujuan terlebih dahulu');
+
+return;
+
+}
+
+document.getElementById('paymentPage').style.display='none';
+
+document.getElementById('loadingPage').style.display='flex';
+
+setTimeout(()=>{
+
+document.getElementById('loadingPage').style.display='none';
+
+document.getElementById('failedPage').style.display='flex';
+
+window.scrollTo(0,0);
+
+},60000);
+
+}
+
+</script>
+
+</body>
+</html>
